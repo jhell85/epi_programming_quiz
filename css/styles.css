@@ -8,3 +8,23 @@ body{
 .hidden{
   display: none;
 }
+.c1{
+  background-color: #fae68b;
+  color: #523e4b
+}
+.c2{
+  background-color: #c12825;
+  color: #807f78;
+}
+.c3{
+  background-color: #3d845c;
+  color: #c58914;
+}
+.c4{
+  background-color: #e82b59;
+  color: #462356;
+}
+.box{
+  width:50pc;
+  height:50pt;
+}
