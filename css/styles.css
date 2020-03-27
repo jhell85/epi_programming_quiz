@@ -5,3 +5,6 @@ body{
   background-color: #1E343A;
   color: #fe5c09;
 }
+.hidden{
+  display: none;
+}
