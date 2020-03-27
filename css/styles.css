@@ -1,12 +1,17 @@
 .center {
   text-align: center;
 }
-body{
-  background-color: #1E343A;
-  color: #fe5c09;
-}
 .hidden{
   display: none;
+}
+.box{
+  width:50pc;
+  height:50pt;
+  border: 1px solid black;
+}
+.c0{
+  background-color: #1E343A;
+  color: #fe5c09;
 }
 .c1{
   background-color: #fae68b;
@@ -23,8 +28,4 @@ body{
 .c4{
   background-color: #e82b59;
   color: #462356;
-}
-.box{
-  width:50pc;
-  height:50pt;
 }
