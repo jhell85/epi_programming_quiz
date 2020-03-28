@@ -3,10 +3,12 @@ $(document).ready(function() {
   let spiritAnimal;
   let question4;
   let mathAnswer;
+
   $("#start").click(function() {
     $("#start-container").addClass("hidden");
     $("#q1").removeClass("hidden");
   });
+
   $("#color1").click(function() {
     changeColor("c1");
   });
@@ -19,10 +21,12 @@ $(document).ready(function() {
   $("#color4").click(function() {
     changeColor("c4");
   });
+
   $("#q1next").click(function() {
     $("#q1").addClass("hidden");
     $("#q2").removeClass("hidden");
   });
+
   $("#frontend").click(function() {
     $("#q2").addClass("hidden");
     $("#q3").removeClass("hidden");
@@ -33,22 +37,24 @@ $(document).ready(function() {
     $("#q3").removeClass("hidden");
     frontEnd = false;
   });
+
   $("#spirit1").click(function() {
     q3complete();
     spiritAnimal = 1;
   });
   $("#spirit2").click(function() {
-    q3complete(2);
+    q3complete();
     spiritAnimal = 2;
   });
   $("#spirit3").click(function() {
-    q3complete(3);
+    q3complete();
     spiritAnimal = 3;
   });
   $("#spirit4").click(function() {
-    q3complete(4);
+    q3complete();
     spiritAnimal = 4;
   });
+
   $("#q4o1").click(function() {
     mathAnswer = q4complete();
     question4 = 3;
@@ -64,10 +70,9 @@ $(document).ready(function() {
 
   $("form").submit(function(event) {
     event.preventDefault();
-    console.log(
-      `frontEnd: ${frontEnd} spiritAnimal: ${spiritAnimal} question4:${question4} mathAnswer: ${mathAnswer} `
-    );
-  })
+    let answer = $("#answer").val()
+    evaluateResults(answer, mathAnswer, question4, spiritAnimal, frontEnd)
+  });
 });
 
 let changeColor = function(colors) {
@@ -90,7 +95,12 @@ let q4complete = function() {
 let getRandomInts = function() {
   let int1 = Math.floor(Math.random() * 10);
   let int2 = Math.floor(Math.random() * 10);
-  $("#firstInt").append(`   ${int1}`);
+  $("#firstInt").append(`${int1}`);
   $("#secondInt").append(`+ ${int2}`);
   return int1 + int2;
 };
+
+let evaluateResults = function(userAnswer, mathAnswer, question4, spiritAnimal, frontEnd) {
+  console.log(`userAnswer; ${userAnswer} mathAnswer: ${mathAnswer} question4: ${question4} spiritAnimal: ${spiritAnimal} frontEnd: ${frontEnd}`);
+  
+}
