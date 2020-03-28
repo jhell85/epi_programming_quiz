@@ -52,24 +52,22 @@ $(document).ready(function() {
   $("#q4o1").click(function() {
     mathAnswer = q4complete();
     question4 = 3;
-    console.log(
-      `frontEnd: ${frontEnd} spiritAnimal: ${spiritAnimal} question4:${question4} mathAnswer: ${mathAnswer} `
-    );
   });
   $("#q4o2").click(function() {
     mathAnswer = q4complete();
     question4 = 2;
-    console.log(
-      `frontEnd: ${frontEnd} spiritAnimal: ${spiritAnimal} question4:${question4} mathAnswer: ${mathAnswer} `
-    );
   });
   $("#q4o3").click(function() {
     mathAnswer = q4complete();
     question4 = 1;
+  });
+
+  $("form").submit(function(event) {
+    event.preventDefault();
     console.log(
       `frontEnd: ${frontEnd} spiritAnimal: ${spiritAnimal} question4:${question4} mathAnswer: ${mathAnswer} `
     );
-  });
+  })
 });
 
 let changeColor = function(colors) {
