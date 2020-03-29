@@ -2,42 +2,42 @@
   align-items: center;
   text-align: center;
 }
-.hidden{
+.hidden {
   display: none;
 }
-.box{
-  width:50pc;
-  height:50pt;
+.box {
+  width: 50pc;
+  height: 50pt;
   border: 1px solid black;
 }
-.c0{
-  background-color: #1E343A;
+.c0 {
+  background-color: #1e343a;
   color: #fe5c09;
 }
-.c1{
+.c1 {
   background-color: #fae68b;
-  color: #523e4b
+  color: #523e4b;
 }
-.c2{
+.c2 {
   background-color: #c12825;
   color: #807f78;
 }
-.c3{
+.c3 {
   background-color: #3d845c;
   color: #c58914;
 }
-.c4{
+.c4 {
   background-color: #e82b59;
   color: #462356;
 }
-.spirit{
+.spirit {
   width: 200px;
   height: auto;
 }
 #userAnswerDiv {
   width: 100px;
 }
-.badges{
+.badges {
   width: 300px;
   height: auto;
 }
