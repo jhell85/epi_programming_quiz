@@ -112,7 +112,7 @@ let evaluateResults = function(
   );
   $("#q5").addClass("hidden");
   if (mathAnswer != userAnswer && spiritAnimal === 3) {
-    console.log("special slide");
+    $("#results").replaceWith(`<div id="results" class="container"><h3 class="text-center">Hmmm looks like you have some real special answers we need a little further information follow the link bellow to answer some more questions <br> <a href="https://jhell85.github.io/language-suggester/">Quiz</a></h3><div class="container d-flex justify-content-center"><img class="badges" src="img/hmmm.png"></div></div>`)
   } else if (frontEnd === true && question4 === 1) {
     $("#results").replaceWith(
       `<div id="results" class="container"><h3 class="text-center">Frontend design best matches you, start with learning web fundamental languages: <br> HTML JavaScript & CSS</h3><div class="container d-flex justify-content-center"><img class="badges" src="img/html5-css-javascript.png"><div class="row"></div></div></div>`
