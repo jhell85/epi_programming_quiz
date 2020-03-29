@@ -70,8 +70,8 @@ $(document).ready(function() {
 
   $("form").submit(function(event) {
     event.preventDefault();
-    let answer = $("#answer").val()
-    evaluateResults(answer, mathAnswer, question4, spiritAnimal, frontEnd)
+    let answer = $("#answer").val();
+    evaluateResults(answer, mathAnswer, question4, spiritAnimal, frontEnd);
   });
 });
 
@@ -100,7 +100,28 @@ let getRandomInts = function() {
   return int1 + int2;
 };
 
-let evaluateResults = function(userAnswer, mathAnswer, question4, spiritAnimal, frontEnd) {
-  console.log(`userAnswer; ${userAnswer} mathAnswer: ${mathAnswer} question4: ${question4} spiritAnimal: ${spiritAnimal} frontEnd: ${frontEnd}`);
-  
-}
+let evaluateResults = function(
+  userAnswer,
+  mathAnswer,
+  question4,
+  spiritAnimal,
+  frontEnd
+) {
+  console.log(
+    `userAnswer; ${userAnswer} mathAnswer: ${mathAnswer} question4: ${question4} spiritAnimal: ${spiritAnimal} frontEnd: ${frontEnd}`
+  );
+  $("#q5").addClass("hidden")
+  if (mathAnswer != userAnswer && spiritAnimal === 3) {
+    console.log("special slide");
+  } else if (frontEnd === true && question4 === 1) {
+    $("#results").replaceWith(`<div id="results" class="container"><h3 class="text-center">Frontend design best matches you, start with learning web fundamental languages: <br> HTML JavaScript & CSS</h3><div class="container d-flex justify-content-center"><img class="badges" src="img/html5-css-javascript.png"><div class="row"></div></div></div>`);
+  } else if (frontEnd === false && question4 === 2) {
+    $("#results").replaceWith(`<div id="results" class="container"><h3 class="text-center">Your first language should be Python a good choice for beginners and advanced programers alike</h3><div class="container d-flex justify-content-center"><img class="badges" src="img/python.png"><div class="row"></div></div></div>`)
+  } else if (frontEnd === false && question4 === 3) {
+    $("#results").replaceWith(`<div id="results" class="container"><h3 class="text-center">Your first language should be C sharp a good choice for beginners and advanced programers alike</h3><div class="container d-flex justify-content-center"><img class="badges" src="img/csharp.png"><div class="row"></div></div></div>`)
+  } else if (frontEnd === true && (spiritAnimal === 1 || spiritAnimal === 2)) {
+    $("#results").replaceWith(`<div id="results" class="container"><h3 class="text-center">You should learn C sharp as well as some JavaScript for your first programming language.</h3><div class="container d-flex justify-content-center"><img class="badges" src="img/csharp.png"><img class="badges" src="img/js.png"><div class="row"></div></div></div>`)
+  } else {
+    $("#results").replaceWith(`<div id="results" class="container"><h3 class="text-center">You should learn Ruby as well as some JavaScript for your first programming language.</h3><div class="container d-flex justify-content-center"><img class="badges" src="img/ruby.png"><img class="badges" src="img/js.png"><div class="row"></div></div></div>`)
+  }
+};
