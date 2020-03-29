@@ -1,13 +1,13 @@
 # _Programming Quiz_
 
-#### _T | Jan 24. 2020_
+#### _T | Mar 27. 2020_
 
 #### By _**Joshua Hellman**_
 
 
 ## Description
 
-
+A simple quiz that uses jquery to hide and show different slides to a user. the program gathers answer data along the way as the user clicks through the slides. then will displays a result to the user based on how they answered the questions.
 
 ## Setup/Installation Requirements
 
@@ -26,17 +26,17 @@ cd desktop
  cd ~/Desktop
  ```
 
- 3. in terminal type '_git clone {link to repository}_ '
+ 3. in terminal type '_git clone https://github.com/jhell85/language-suggester.git_ '
 
 ```sh
-git clone https://github.com/dustatron/boilerplate-simple-website.git
+git clone https://github.com/jhell85/language-suggester.git
 ```
 
 4. navigate to the new folder that was created on your desk
 5. select index.html
 6. right click on the file and select _'open with'_
 7. select your browser
-8. enjoy this project
+8. enjoy the quiz
 
 
 ## Specs
@@ -44,8 +44,8 @@ git clone https://github.com/dustatron/boilerplate-simple-website.git
 
 Behavoir | Input | Output
 :---------:|:------:|:------:
-The program takes in input and console.log a 'click' | 'any word' | 'click'
-The program takes in any words and console logs the output | 'learning to code' | 'learning to code'
+The program will let you click through slides and gather data based on your answer | select answer | move to next slide
+The program will take what data it has obtained from the quiz and give a result | submit final question | display results to user
 
 ## Support 
 
