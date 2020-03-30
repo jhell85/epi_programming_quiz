@@ -107,8 +107,9 @@ let evaluateResults = function(
   spiritAnimal,
   frontEnd
 ) {
+  let color = $("body").css("background-color");
   $("#q5").addClass("hidden");
-  if (mathAnswer != userAnswer && spiritAnimal === 3) {
+  if (mathAnswer != userAnswer && spiritAnimal === 3 && color === "rgb(250, 230, 139)") {
     $("#results").replaceWith(`<div id="results" class="container"><h3 class="text-center">Hmmm looks like you have some real special answers we need a little further information follow the link bellow to answer some more questions <br> <a href="https://jhell85.github.io/language-suggester/">Quiz</a></h3><div class="container d-flex justify-content-center"><img class="badges" src="img/hmmm.png"></div></div>`)
   } else if (frontEnd === true && question4 === 1) {
     $("#results").replaceWith(
